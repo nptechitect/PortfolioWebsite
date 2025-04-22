@@ -70,14 +70,23 @@ h6 {
     font-size: .75rem;
 }
 
-.button1{
+.button1 {
     background-color: var(--bgAccent3);
     border-radius: 10px;
     padding: .5rem 1rem;
-    color: var(--txtMain2);
+    color: var(--txtColor2);
+    text-decoration: none;
 }
 
 body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
     background-color: var(--bgMain);
 }
 
@@ -85,6 +94,7 @@ body {
 
 header {
     background-color: var(--bgAccent2);
+    grid-row-start: 1;
     position: sticky;
     top: 0;
     min-height: 2rem;
@@ -125,7 +135,8 @@ header #menu_icon {
 }
 
 main {
-
+    grid-row-start: 2;
+    font-family: var(--SansFont)
 }
 
 /* #banner {
@@ -141,7 +152,7 @@ main {
 
 #banner {
     display: grid;
-    grid-template: 50px 300px 50px / repeat(6, 1fr);
+    grid-template: 50px 200px 50px / repeat(6, 1fr);
     grid-gap: 30px;
     /* background-color: var(--bgAccent1); */
     color: var(--txtColor2);
@@ -177,9 +188,10 @@ main {
 }
 
 #circle_portrait img{
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     object-fit: fill;
+    border-radius: 50%;
 }
 
 #mid_2col {
@@ -284,7 +296,29 @@ main {
     padding-bottom: .5rem;
 }
 
+#skills #icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.skillIcon {
+    max-width: 50px;
+    /* background-color: var(--bgAccent3); */
+    padding: .5rem;
+    border-radius: 50%;
+}
+
+.skillIcon img {
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 90%;
+}
+
 #skills ul {
+    display: none;
     padding-left: 2rem;
 }
 
@@ -296,11 +330,13 @@ main {
 }
 
 #featured_projects {
-    margin: 0 3rem;
+    margin: .5rem 3rem;
+    padding: 1rem 1rem;
     text-align: center;
 }
 
 #cardArea {
+    margin-top: 1rem;
     display: flex;
     justify-content: space-evenly;
 }
@@ -341,6 +377,7 @@ main {
 }
 
 footer {
+    grid-row-start: 3;
     margin-top: 2rem;
     background-color: var(--bgAccent1);
     display: flex;

@@ -23,7 +23,37 @@
             </nav>
         </header>
         <main>
-            <h1>Under Construction</h1>
+            <h1>Contact</h1>
+            <form action="" method="POST">
+                <!-- Name -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+                <!-- Email Address -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="johndoe@anything.com" required />
+
+                <!-- Phone -->
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" placeholder="(123)456-7890" required />
+
+                <!-- Response contact preference -->
+                <fieldset>
+                    <legend>Contact Preference:</legend>
+                    <input type="radio" id="byPhone" name="contactBy" value="phone" required />
+                    <label for="byPhone">By Phone </label>
+
+                    <input type="radio" id="byEmail" name="contactBy" value="email" required />
+                    <label for="byEmail">By Email </label>
+                </fieldset>
+
+                <!-- Message from user -->
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="" required maxlength="255"></textarea>
+                <span class="msgDetails">0/255</span>
+
+                <button type="submit" title="Send Message">Send Message</button>
+            </form>
         </main>
         <footer>
             <section id="copyright">

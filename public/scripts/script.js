@@ -44,3 +44,11 @@ document.querySelectorAll("#message").forEach((element) => {
 
   })
 });
+
+document.getElementById("menu_icon").addEventListener("click", (event) => {
+  const menu = document.getElementById("menuDropDown");
+
+  const current = menu.style.display || window.getComputedStyle(menu).display;
+
+  menu.style.display = (current === 'none') ? 'block' : 'none';
+});

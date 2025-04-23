@@ -95,7 +95,6 @@ body {
     min-height: 100svh;
 
     background-color: var(--bgMain);
-    min-width: 100vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -147,7 +146,7 @@ header #menu_icon {
 }
 
 header .menu {
-    display:none;
+    display: none;
 }
 
 @media only screen and (max-width: 500px) {
@@ -163,7 +162,7 @@ header .menu {
     }
 
     header .menu {
-        display: block;
+        display: none;
         position: relative;
         top: 40px;
         z-index: 1;
@@ -268,6 +267,19 @@ main {
     #banner #name {
         order: 2;
     }
+
+    #banner #name h1 {
+        font-size: 2.5rem;
+    }
+
+    #banner #name h4 {
+        font-size: 1.25rem;
+    }
+
+    #wave {
+        height: 100px;
+        margin-bottom: 1rem;
+    }
 }
 
 
@@ -316,6 +328,7 @@ main {
 }
 
 @media only screen and (max-width: 500px){
+
     #blog_button {
         width: 75%;
     }
@@ -426,6 +439,10 @@ main {
         margin: 0 auto;
     }
 
+    #short_about p {
+        font-size: 1rem;
+    }
+
     #skills {
         order: 2;
         margin: .5rem 3rem;
@@ -440,6 +457,10 @@ main {
     #latest_blogs .blog_list {
         float: none;
         margin: 0 auto;
+    }
+
+    #latest_blogs .synopsis {
+        font-size: 1rem;
     }
 }
 
@@ -503,6 +524,10 @@ main {
         border-radius: 0;
         box-shadow: none;
     }
+
+    #cardArea {
+        flex-wrap: wrap;
+    }
 }
 
 footer {
@@ -548,5 +573,14 @@ footer {
 @media only screen and (max-width: 800px) {
     footer {
         margin: 0;
+    }
+
+    .footer ul {
+        flex-direction: column;
+    }
+
+    .footer ul li::after {
+        padding: 0;
+        content: '';
     }
 }

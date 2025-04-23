@@ -3,11 +3,150 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Web Page</title>
+        <title>Nick Parrish - Portfolio</title>
         <link rel="stylesheet" type="text/css" href="style/styles.css">
         <script src="scripts/script.js" defer></script>
     </head>
     <body>
-        <h1>Welcome</h1>
+        <header>
+            <div id="logo_initials">
+                <a href="index.html">NP</a>
+            </div>
+            <nav>
+                <ul id="ulHeader">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <img id="menu_icon" src="./images/hamburger-menu.svg" alt="Menu Icon"/>
+                <div id="menuDropDown" class="menu">
+                    <ul id="ulMenu">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div id="bannerArea">
+                <section id="banner">
+                    <section id="name">
+                        <h1>Nick Parrish</h1>
+                        <h4>Code Whisper / Developer</h4>
+                    </section>
+                    <section id="circle_portrait">
+                        <img src="./images/profile_cropped.jpg" alt="circle_portrait"/>
+                    </section>
+                </section>
+                <div id="wave">&nbsp;</div>
+            </div>
+            <section id="mid_2col">
+                <!-- Section has two main elements, latest blog posts and brief about section -->
+                <section class="alignLeft" id="latest_blogs">
+                    <h2>Latest Posts</h2>
+                    <section class="blog_list">
+                        <section class="blog">
+                            <h4 class="blogTitle">Title</h4>
+                            <h5 class="blogPublishedAt">Dec. 12th, 2024</h5>
+                            <p class="synopsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit obcaecati alias quisquam beatae corrupti est nam itaque, necessitatibus dolores cumque ut repudiandae omnis excepturi amet aliquam a enim laudantium eligendi.</p>
+                        </section>
+                        <section class="blog">
+                            <h4 class="blogTitle">Title 2</h4>
+                            <h5 class="blogPublishedAt">Nov. 20th, 2024</h5>
+                            <p class="synopsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit obcaecati alias quisquam beatae corrupti est nam itaque, necessitatibus dolores cumque ut repudiandae omnis excepturi amet aliquam a enim laudantium eligendi.</p>
+                        </section>
+                    </section>
+                    <div id="blog_button">
+                        <a class="button1" href="projects.html">More Posts</a>
+                    </div>
+                </section>
+                <section id="short_about">
+                    <article>
+                        <p>Being able to take ideas from abstract thought into concrete code has always facinated me. Code is rigid and yet flexible to meet just about any problem if you can wrap your head around it.</p>
+                        <br/>
+                        <p>When I'm not at a keyboard, you'll find me enjoying the freedom of motorcycle or diving the depths of the sea.</p>
+                        <h4><a href="about.html">more...</a></h4>
+                    </article>
+                </section>
+                <section id="skills">
+                    <h3>Skills</h3>
+                    <section id="icons">
+                        <div class="skillIcon">
+                            <img src="./images/html_icon.png" alt="HTML 5" title="HTML 5"/>
+                        </div>
+                        <div class="skillIcon">
+                            <img src="./images/js_icon.png" alt="Javascript" title="Javascript"/>
+                        </div>
+                        <div class="skillIcon">
+                            <img src="./images/css_icon.png" alt="CSS" title="CSS"/>
+                        </div>
+                        <div class="skillIcon">
+                            <img src="./images/nodejs-icon.png" alt="Nodejs" title="Node.js"/>
+                        </div>
+                        <div class="skillIcon">
+                            <img src="./images/windows_icon.png" alt="Windows" title="Windows"/>
+                        </div>
+                        <div class="skillIcon">
+                            <img src="./images/sql_icon.png" alt="SQL" title="SQL Databases"/>
+                        </div>
+                        <div class="skillIcon">
+                            <img src="./images/winad_icon.png" alt="Active Directory" title="Microsoft AD"/>
+                        </div>
+                        <div class="skillIcon">
+                            <img src="./images/powershell-icon.png" alt="powershell" title="PowerShell"/>
+                        </div>
+                        <div class="skillIcon">
+                            <img src="./images/csharp_icon.png" alt="C#.Net" title="C#.Net"/>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <section id="featured_projects" class="card">
+                <h2>Featured Projects</h2>
+                <div id="cardArea">
+                    <section class="projectCard">
+                        <h4><a href="#">Mixed Messages</a></h4>
+                        <a href="#"><img src="./images/project1.png" alt="Screenshot of project1" /></a>
+                        <div class="brief">
+                            <p>Simple website, that selects random messages when a user clicks.</p>
+                        </div>
+                    </section>
+                    <section class="projectCard">
+                        <h4><a href="#">Mildly Wild Raft Co.</a></h4>
+                        <a href="#"><img src="./images/project2.png" alt="Screenshot of project2" /></a>
+                        <div class="brief">
+                            <p>Home page for a fictional company, folowing a design spec as a learning project.</p>
+                        </div>
+                    </section>
+                    <!-- <section class="projectCard">
+                        <h4><a href="#">Mixed Messages</a></h4>
+                        <a href="#"><img src="./images/project1.png" alt="Screenshot of project1" /></a>
+                        <div class="brief">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </section> -->
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section id="copyright">
+                &copy; Nick Parrish
+            </section>
+            <section id="footer_links">
+                <nav class="footer">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#">Site Map</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </footer>
     </body>
 </html>

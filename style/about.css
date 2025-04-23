@@ -1,0 +1,15 @@
+#content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+}
+
+#content img {
+    max-width: 400px;
+    height: auto;
+    grid-column-start: 1;
+}
+
+article {
+    grid-column-start: 2;
+}

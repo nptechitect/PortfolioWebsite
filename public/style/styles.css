@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 :root {
@@ -25,6 +26,12 @@
     --btnColor1: black;
     --btnColor2: rgba(205, 179, 128, 1);
     --btnColor3: rgba(232, 221, 203, 1);
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 /* Global Stylings */
@@ -82,12 +89,17 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
-
+    gap: 0;
     min-height: 100vh;
 
     min-height: 100svh;
 
     background-color: var(--bgMain);
+    min-width: 100vw;
+}
+
+@media only screen and (max-width: 600px) {
+
 }
 
 /* Targeted Styles */
@@ -113,12 +125,12 @@ header #logo_initials {
     font-size: 1.5rem;
 }
 
-header nav ul {
+header nav #ulHeader {
     display: flex;
     flex-direction: row;
 }
 
-header nav ul li {
+header nav #ulHeader li {
     list-style: none;
     padding-left: 10px;
 }
@@ -134,15 +146,49 @@ header #menu_icon {
     display: none;
 }
 
-main {
-    grid-row-start: 2;
-    font-family: var(--SansFont)
+header .menu {
+    display:none;
 }
 
-/* #banner {
-    display: flex;
-    justify-content: center;
-} */
+@media only screen and (max-width: 500px) {
+    header nav #ulHeader {
+        display: none;
+    }
+
+    header #menu_icon {
+        display: block;
+        float: right;
+        width: 28px;
+        cursor: pointer;
+    }
+
+    header .menu {
+        display: block;
+        position: relative;
+        top: 40px;
+        z-index: 1;
+        background-color: var(--bgAccent2);
+        padding: 1rem;
+    }
+
+    header #ulMenu {
+        list-style: none;
+        display: block;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    header #ulMenu li {
+        margin-bottom: 10px;
+    }
+}
+
+main {
+    grid-row-start: 2;
+    font-family: var(--SansFont);
+    width: 100%
+}
 
 #bannerArea {
     background: #031634;
@@ -194,6 +240,37 @@ main {
     border-radius: 50%;
 }
 
+@media only screen and (max-width: 800px) {
+    #circle_portrait img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #bannerArea {
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    #banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #circle_portrait img {
+        order: 1;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    #banner #name {
+        order: 2;
+    }
+}
+
+
 #mid_2col {
     display: grid;
     grid-template: repeat(2, 1fr)/ 60% 40%;
@@ -230,6 +307,18 @@ main {
     float: right;
     margin-top: 2rem;
     width: 25%;
+}
+
+@media only screen and (max-width: 900px){
+    #blog_button {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    #blog_button {
+        width: 75%;
+    }
 }
 
 .blog_list {
@@ -317,9 +406,41 @@ main {
     max-width: 90%;
 }
 
-#skills ul {
-    display: none;
-    padding-left: 2rem;
+@media only screen and (max-width: 600px) {
+    #mid_2col {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    #short_about {
+        text-align: center;
+        vertical-align: middle;
+        order: 1;
+        padding: 0;
+    }
+
+    #short_about article{
+        float: none;
+        margin: 0 auto;
+    }
+
+    #skills {
+        order: 2;
+        margin: .5rem 3rem;
+    }
+
+    #latest_blogs {
+        text-align: center;
+        margin: .5rem 3rem;
+        order: 3;
+    }
+
+    #latest_blogs .blog_list {
+        float: none;
+        margin: 0 auto;
+    }
 }
 
 .card {
@@ -376,6 +497,14 @@ main {
     font-weight: bold;
 }
 
+@media only screen and (max-width: 800px) {
+    #featured_projects {
+        margin: .5rem 0 0 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
 footer {
     grid-row-start: 3;
     margin-top: 2rem;
@@ -414,4 +543,10 @@ footer {
 
 .footer ul li:last-child::after {
     content: '';
+}
+
+@media only screen and (max-width: 800px) {
+    footer {
+        margin: 0;
+    }
 }

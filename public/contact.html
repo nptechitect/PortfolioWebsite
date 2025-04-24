@@ -30,37 +30,52 @@
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="page">
             <h1>Contact</h1>
             <form action="" method="POST">
                 <!-- Name -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="John Doe" required />
+                <section>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required />
+                </section>
 
                 <!-- Email Address -->
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="johndoe@anything.com" required />
+                <section>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@anything.com" required />
+                </section>
 
                 <!-- Phone -->
-                <label for="phone">Phone:</label>
-                <input type="text" id="phone" name="phone" placeholder="(123)456-7890" required />
+                <section>
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" placeholder="(123)456-7890" required />
+                </section>
 
                 <!-- Response contact preference -->
-                <fieldset>
-                    <legend>Contact Preference:</legend>
-                    <input type="radio" id="byPhone" name="contactBy" value="phone" required />
-                    <label for="byPhone">By Phone </label>
-
-                    <input type="radio" id="byEmail" name="contactBy" value="email" required />
-                    <label for="byEmail">By Email </label>
-                </fieldset>
+                <section>
+                    <fieldset>
+                        <legend>Contact Preference:</legend>
+                        <section>
+                            <input type="radio" id="byPhone" name="contactBy" value="phone" required />
+                            <label for="byPhone">By Phone </label>
+                        </section>
+                        <section>
+                            <input type="radio" id="byEmail" name="contactBy" value="email" required />
+                            <label for="byEmail">By Email </label>
+                        </section>
+                    </fieldset>
+                </section>
 
                 <!-- Message from user -->
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="" required maxlength="255"></textarea>
-                <span class="msgDetails">0/255</span>
+                <section class="textArea">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="" required maxlength="255"></textarea>
+                    <span class="msgDetails">0/255</span>
+                </section>
 
-                <button type="submit" title="Send Message">Send Message</button>
+                <section>
+                    <button class="button1" type="submit" title="Send Message">Send Message</button>
+                </section>
             </form>
         </main>
         <footer>

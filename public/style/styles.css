@@ -189,6 +189,41 @@ main {
     width: 100%
 }
 
+main.page {
+    padding: 1rem 5% 1rem 10%;
+}
+
+main.page form label {
+    font-weight: bold;
+    color: var(--txtAccent1);
+}
+
+main.page form section {
+    float: left;
+    clear: both;
+    margin: 10px 0;
+}
+
+main.page form fieldset {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+main.page form textarea {
+    width: 300px;
+    height: 150px;
+}
+
+.textArea {
+    display: flex;
+    flex-direction: column;
+}
+
+.textArea span {
+    text-align: right;
+}
+
 #bannerArea {
     background: #031634;
     background: linear-gradient(0, var(--bgAccent1) 0%, var(--txtAccent1) 50%, var(--bgAccent2) 100%);
@@ -221,10 +256,6 @@ main {
     text-align: right;
     place-self: center end;
     text-transform: capitalize;
-}
-
-#banner #name h1 {
-
 }
 
 #circle_portrait {
@@ -291,9 +322,6 @@ main {
     margin: 1rem 3rem;
 }
 
-#mid_2col section {
-    /* border: 1px solid red; */
-}
 
 #mid_2col h3 {
     position: relative;
